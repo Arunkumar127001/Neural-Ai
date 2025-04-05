@@ -337,5 +337,22 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const sendBtn = form.querySelector("button[type='submit']");
+    
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent actual form submission
+
+      // Show confirmation message
+      alert("Message sent!");
+
+      // Clear input fields
+      form.reset();
+    });
+  });
+</script>
+
 </body>
 </html> 
