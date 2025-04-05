@@ -340,19 +340,30 @@
     <script>
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
-    const sendBtn = form.querySelector("button[type='submit']");
-    
+
     form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent actual form submission
+      e.preventDefault(); // Stop the form from actually submitting
 
-      // Show confirmation message
-      alert("Message sent!");
+      // Check if all required fields are filled
+      const inputs = form.querySelectorAll("input, textarea");
+      let allFilled = true;
 
-      // Clear input fields
-      form.reset();
+      inputs.forEach((input) => {
+        if (input.value.trim() === "") {
+          allFilled = false;
+        }
+      });
+
+      if (allFilled) {
+        alert("Message sent!");
+        form.reset();
+      } else {
+        alert("Please fill in all fields before sending.");
+      }
     });
   });
 </script>
+
 
 </body>
 </html> 
