@@ -25,6 +25,7 @@
     "description": "Arun Kumar Maurya is an entrepreneur and developer aspiring to build businesses and become a leader in technology and innovation.",
     "image": [
       "https://etherneural.com/assets/images/arun-profile.jpeg",
+      "https://etherneural.com/assets/images/arun-2.jpeg",
       "https://etherneural.com/assets/images/arun-3.jpeg",
       "https://etherneural.com/assets/images/arun-4.jpeg"
     ]
@@ -74,25 +75,17 @@
       border-radius: 6px;
       font-size: 14px;
     }
-    .custom-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 1rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-  }
-  .gallery-img {
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    object-fit: cover;
-  }
-  .gallery-img.medium {
-    height: 320px;   /* Image 3 medium */
-  }
-  .gallery-img.large {
-    height: 450px;   /* Image 4 taller */
-  }
+  .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
     footer {
       text-align: center;
       background: #222;
@@ -126,14 +119,15 @@
     </div>
   </section>
 
-  <section>
-  <h2>Photo Gallery</h2>
-  <div class="gallery-row">
-    <img src="assets/images/arun-2.jpeg" alt="Arun Kumar Maurya" class="gallery-img tall">
-    <img src="assets/images/arun-3.jpeg" alt="Arun Kumar Maurya" class="gallery-img medium center">
-    <img src="assets/images/arun-4.jpeg" alt="Arun Kumar Maurya" class="gallery-img tall">
-  </div>
-</section>
+ <section>
+    <h2>Photo Gallery</h2>
+    <div class="gallery-grid">
+      <img src="assets/images/arun-profile.jpeg" alt="Arun Kumar Maurya">
+      
+      <img src="assets/images/arun-3.jpeg" alt="Arun Kumar Maurya">
+      <img src="assets/images/arun-4.jpeg" alt="Arun Kumar Maurya">
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Arun Kumar Maurya | All rights reserved.</p>
